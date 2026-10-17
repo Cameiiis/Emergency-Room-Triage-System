@@ -9,10 +9,10 @@ import java.util.List;
 public class QueueDisplayTest {
     public static void main(String[] args) throws Exception {
         ERQueue er = new ERQueue();
-        er.arrive("Low", 3, "sample", "09:00");
-        er.arrive("Late", 2, "sample", "09:20");
-        er.arrive("Early", 2, "sample", "09:10");
         er.arrive("Urgent", 1, "sample", "09:30");
+        er.arrive("Low", 3, "sample", "09:00");
+        er.arrive("Early", 2, "sample", "09:10");
+        er.arrive("Late", 2, "sample", "09:20");
 
         ByteArrayOutputStream captured = new ByteArrayOutputStream();
         PrintStream original = System.out;
