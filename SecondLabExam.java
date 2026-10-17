@@ -66,9 +66,11 @@ import java.util.*;
 			System.out.println("\n === UPDATED QUEUE ===");
 			System.out.println("Patients Waiting: " + queue.size());
 			
+			List<Patient> ordered = new ArrayList<>(queue);
+			Collections.sort(ordered);
 			int i = 1;
-			for (Patient patient : queue) {
-				System.out.println(i + " " + patient );
+			for (Patient patient : ordered) {
+				System.out.println(i++ + " " + patient);
 			}
 			
 		}
